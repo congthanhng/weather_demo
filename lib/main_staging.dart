@@ -1,6 +1,6 @@
-import 'package:weather_demo/app/app.dart';
 import 'package:weather_demo/bootstrap.dart';
+import 'package:weather_demo/weather_app.dart';
 
 void main() {
-  bootstrap(() => const App());
+  bootstrap(() => const WeatherApp());
 }

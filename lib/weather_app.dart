@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:weather_demo/counter/counter.dart';
-import 'package:weather_demo/l10n/l10n.dart';
+import 'package:weather_demo/presentation/home/home_page.dart';
+import 'package:weather_demo/shared/l10n/l10n.dart';
 
-class App extends StatelessWidget {
-  const App({super.key});
+class WeatherApp extends StatelessWidget {
+  const WeatherApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const HomePage(),
     );
   }
 }
