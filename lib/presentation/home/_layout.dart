@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 part of 'home_page.dart';
 
 final class _HomeLayout extends StatelessWidget {
