@@ -13,6 +13,10 @@ part 'widgets/_loading.dart';
 part 'widgets/_fetched_layout.dart';
 part 'widgets/_forecast_item.dart';
 part 'widgets/_days_forecast.dart';
+part 'widgets/_temperature.dart';
+part 'widgets/_wind_box_info.dart';
+part 'widgets/_pressure_box_info.dart';
+part 'widgets/_more_box_info.dart';
 
 final class HomePage extends StatelessWidget {
   const HomePage({super.key});
