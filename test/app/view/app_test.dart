@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:weather_demo/presentation/home/home_page.dart';
-import 'package:weather_demo/weather_app.dart';
+import 'package:weather_demo/presentation/weather_app.dart';
 
 void main() {
   group('Weather App', () {
