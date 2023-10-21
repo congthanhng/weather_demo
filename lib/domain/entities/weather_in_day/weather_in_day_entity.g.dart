@@ -9,11 +9,11 @@ part of 'weather_in_day_entity.dart';
 _$WeatherInDayEntityImpl _$$WeatherInDayEntityImplFromJson(
         Map<String, dynamic> json) =>
     _$WeatherInDayEntityImpl(
-      avghumidity: json['avghumidity'] as int?,
+      avghumidity: (json['avghumidity'] as num?)?.toDouble(),
       avgtempC: (json['avgtemp_c'] as num?)?.toDouble(),
       avgtempF: (json['avgtemp_f'] as num?)?.toDouble(),
       avgvisKm: (json['avgvis_km'] as num?)?.toDouble(),
-      avgvisMiles: json['avgvis_miles'] as int?,
+      avgvisMiles: (json['avgvis_miles'] as num?)?.toDouble(),
       condition: json['condition'] == null
           ? null
           : ConditionEntity.fromJson(json['condition'] as Map<String, dynamic>),
@@ -23,14 +23,14 @@ _$WeatherInDayEntityImpl _$$WeatherInDayEntityImplFromJson(
       dailyWillItSnow: json['daily_will_it_snow'] as int?,
       maxtempC: (json['maxtemp_c'] as num?)?.toDouble(),
       maxtempF: (json['maxtemp_f'] as num?)?.toDouble(),
-      maxwindKph: json['maxwind_kph'] as int?,
+      maxwindKph: (json['maxwind_kph'] as num?)?.toDouble(),
       maxwindMph: (json['maxwind_mph'] as num?)?.toDouble(),
       mintempC: (json['mintemp_c'] as num?)?.toDouble(),
       mintempF: (json['mintemp_f'] as num?)?.toDouble(),
       totalprecipIn: (json['totalprecip_in'] as num?)?.toDouble(),
       totalprecipMm: (json['totalprecip_mm'] as num?)?.toDouble(),
-      totalsnowCm: json['totalsnow_cm'] as int?,
-      uv: json['uv'] as int?,
+      totalsnowCm: (json['totalsnow_cm'] as num?)?.toDouble(),
+      uv: (json['uv'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$WeatherInDayEntityImplToJson(

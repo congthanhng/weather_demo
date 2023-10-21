@@ -7,11 +7,11 @@ part 'weather_in_day_entity.g.dart';
 @freezed
 class WeatherInDayEntity with _$WeatherInDayEntity{
   const factory WeatherInDayEntity({
-    int? avghumidity,
+    double? avghumidity,
     double? avgtempC,
     double? avgtempF,
     double? avgvisKm,
-    int? avgvisMiles,
+    double? avgvisMiles,
     ConditionEntity? condition,
     int? dailyChanceOfRain,
     int? dailyChanceOfSnow,
@@ -19,14 +19,14 @@ class WeatherInDayEntity with _$WeatherInDayEntity{
     int? dailyWillItSnow,
     double? maxtempC,
     double? maxtempF,
-    int? maxwindKph,
+    double? maxwindKph,
     double? maxwindMph,
     double? mintempC,
     double? mintempF,
     double? totalprecipIn,
     double? totalprecipMm,
-    int? totalsnowCm,
-    int? uv,}) = _WeatherInDayEntity;
+    double? totalsnowCm,
+    double? uv,}) = _WeatherInDayEntity;
 
   factory WeatherInDayEntity.fromJson(Map<String, Object?> json) =>
       _$WeatherInDayEntityFromJson(json);

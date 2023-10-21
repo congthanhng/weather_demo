@@ -17,9 +17,9 @@ class _FetchedLayout extends StatelessWidget {
         Text('${dataModel.current?.windKph}'),
         Text('${dataModel.current?.windDir}'),
         Text('${dataModel.current?.uv}'),
-
-
-
+        Text('${dataModel.forecast?.forecastday?.first.day?.mintempC}/${{
+          dataModel.forecast?.forecastday?.first.day?.maxtempC
+        }}'),
       ],
     );
   }

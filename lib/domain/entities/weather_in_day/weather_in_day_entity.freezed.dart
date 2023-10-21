@@ -20,11 +20,11 @@ WeatherInDayEntity _$WeatherInDayEntityFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$WeatherInDayEntity {
-  int? get avghumidity => throw _privateConstructorUsedError;
+  double? get avghumidity => throw _privateConstructorUsedError;
   double? get avgtempC => throw _privateConstructorUsedError;
   double? get avgtempF => throw _privateConstructorUsedError;
   double? get avgvisKm => throw _privateConstructorUsedError;
-  int? get avgvisMiles => throw _privateConstructorUsedError;
+  double? get avgvisMiles => throw _privateConstructorUsedError;
   ConditionEntity? get condition => throw _privateConstructorUsedError;
   int? get dailyChanceOfRain => throw _privateConstructorUsedError;
   int? get dailyChanceOfSnow => throw _privateConstructorUsedError;
@@ -32,14 +32,14 @@ mixin _$WeatherInDayEntity {
   int? get dailyWillItSnow => throw _privateConstructorUsedError;
   double? get maxtempC => throw _privateConstructorUsedError;
   double? get maxtempF => throw _privateConstructorUsedError;
-  int? get maxwindKph => throw _privateConstructorUsedError;
+  double? get maxwindKph => throw _privateConstructorUsedError;
   double? get maxwindMph => throw _privateConstructorUsedError;
   double? get mintempC => throw _privateConstructorUsedError;
   double? get mintempF => throw _privateConstructorUsedError;
   double? get totalprecipIn => throw _privateConstructorUsedError;
   double? get totalprecipMm => throw _privateConstructorUsedError;
-  int? get totalsnowCm => throw _privateConstructorUsedError;
-  int? get uv => throw _privateConstructorUsedError;
+  double? get totalsnowCm => throw _privateConstructorUsedError;
+  double? get uv => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -54,11 +54,11 @@ abstract class $WeatherInDayEntityCopyWith<$Res> {
       _$WeatherInDayEntityCopyWithImpl<$Res, WeatherInDayEntity>;
   @useResult
   $Res call(
-      {int? avghumidity,
+      {double? avghumidity,
       double? avgtempC,
       double? avgtempF,
       double? avgvisKm,
-      int? avgvisMiles,
+      double? avgvisMiles,
       ConditionEntity? condition,
       int? dailyChanceOfRain,
       int? dailyChanceOfSnow,
@@ -66,14 +66,14 @@ abstract class $WeatherInDayEntityCopyWith<$Res> {
       int? dailyWillItSnow,
       double? maxtempC,
       double? maxtempF,
-      int? maxwindKph,
+      double? maxwindKph,
       double? maxwindMph,
       double? mintempC,
       double? mintempF,
       double? totalprecipIn,
       double? totalprecipMm,
-      int? totalsnowCm,
-      int? uv});
+      double? totalsnowCm,
+      double? uv});
 
   $ConditionEntityCopyWith<$Res>? get condition;
 }
@@ -116,7 +116,7 @@ class _$WeatherInDayEntityCopyWithImpl<$Res, $Val extends WeatherInDayEntity>
       avghumidity: freezed == avghumidity
           ? _value.avghumidity
           : avghumidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       avgtempC: freezed == avgtempC
           ? _value.avgtempC
           : avgtempC // ignore: cast_nullable_to_non_nullable
@@ -132,7 +132,7 @@ class _$WeatherInDayEntityCopyWithImpl<$Res, $Val extends WeatherInDayEntity>
       avgvisMiles: freezed == avgvisMiles
           ? _value.avgvisMiles
           : avgvisMiles // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
@@ -164,7 +164,7 @@ class _$WeatherInDayEntityCopyWithImpl<$Res, $Val extends WeatherInDayEntity>
       maxwindKph: freezed == maxwindKph
           ? _value.maxwindKph
           : maxwindKph // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       maxwindMph: freezed == maxwindMph
           ? _value.maxwindMph
           : maxwindMph // ignore: cast_nullable_to_non_nullable
@@ -188,11 +188,11 @@ class _$WeatherInDayEntityCopyWithImpl<$Res, $Val extends WeatherInDayEntity>
       totalsnowCm: freezed == totalsnowCm
           ? _value.totalsnowCm
           : totalsnowCm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       uv: freezed == uv
           ? _value.uv
           : uv // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
     ) as $Val);
   }
 
@@ -218,11 +218,11 @@ abstract class _$$WeatherInDayEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? avghumidity,
+      {double? avghumidity,
       double? avgtempC,
       double? avgtempF,
       double? avgvisKm,
-      int? avgvisMiles,
+      double? avgvisMiles,
       ConditionEntity? condition,
       int? dailyChanceOfRain,
       int? dailyChanceOfSnow,
@@ -230,14 +230,14 @@ abstract class _$$WeatherInDayEntityImplCopyWith<$Res>
       int? dailyWillItSnow,
       double? maxtempC,
       double? maxtempF,
-      int? maxwindKph,
+      double? maxwindKph,
       double? maxwindMph,
       double? mintempC,
       double? mintempF,
       double? totalprecipIn,
       double? totalprecipMm,
-      int? totalsnowCm,
-      int? uv});
+      double? totalsnowCm,
+      double? uv});
 
   @override
   $ConditionEntityCopyWith<$Res>? get condition;
@@ -279,7 +279,7 @@ class __$$WeatherInDayEntityImplCopyWithImpl<$Res>
       avghumidity: freezed == avghumidity
           ? _value.avghumidity
           : avghumidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       avgtempC: freezed == avgtempC
           ? _value.avgtempC
           : avgtempC // ignore: cast_nullable_to_non_nullable
@@ -295,7 +295,7 @@ class __$$WeatherInDayEntityImplCopyWithImpl<$Res>
       avgvisMiles: freezed == avgvisMiles
           ? _value.avgvisMiles
           : avgvisMiles // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
@@ -327,7 +327,7 @@ class __$$WeatherInDayEntityImplCopyWithImpl<$Res>
       maxwindKph: freezed == maxwindKph
           ? _value.maxwindKph
           : maxwindKph // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       maxwindMph: freezed == maxwindMph
           ? _value.maxwindMph
           : maxwindMph // ignore: cast_nullable_to_non_nullable
@@ -351,11 +351,11 @@ class __$$WeatherInDayEntityImplCopyWithImpl<$Res>
       totalsnowCm: freezed == totalsnowCm
           ? _value.totalsnowCm
           : totalsnowCm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       uv: freezed == uv
           ? _value.uv
           : uv // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
     ));
   }
 }
@@ -389,7 +389,7 @@ class _$WeatherInDayEntityImpl implements _WeatherInDayEntity {
       _$$WeatherInDayEntityImplFromJson(json);
 
   @override
-  final int? avghumidity;
+  final double? avghumidity;
   @override
   final double? avgtempC;
   @override
@@ -397,7 +397,7 @@ class _$WeatherInDayEntityImpl implements _WeatherInDayEntity {
   @override
   final double? avgvisKm;
   @override
-  final int? avgvisMiles;
+  final double? avgvisMiles;
   @override
   final ConditionEntity? condition;
   @override
@@ -413,7 +413,7 @@ class _$WeatherInDayEntityImpl implements _WeatherInDayEntity {
   @override
   final double? maxtempF;
   @override
-  final int? maxwindKph;
+  final double? maxwindKph;
   @override
   final double? maxwindMph;
   @override
@@ -425,9 +425,9 @@ class _$WeatherInDayEntityImpl implements _WeatherInDayEntity {
   @override
   final double? totalprecipMm;
   @override
-  final int? totalsnowCm;
+  final double? totalsnowCm;
   @override
-  final int? uv;
+  final double? uv;
 
   @override
   String toString() {
@@ -523,11 +523,11 @@ class _$WeatherInDayEntityImpl implements _WeatherInDayEntity {
 
 abstract class _WeatherInDayEntity implements WeatherInDayEntity {
   const factory _WeatherInDayEntity(
-      {final int? avghumidity,
+      {final double? avghumidity,
       final double? avgtempC,
       final double? avgtempF,
       final double? avgvisKm,
-      final int? avgvisMiles,
+      final double? avgvisMiles,
       final ConditionEntity? condition,
       final int? dailyChanceOfRain,
       final int? dailyChanceOfSnow,
@@ -535,20 +535,20 @@ abstract class _WeatherInDayEntity implements WeatherInDayEntity {
       final int? dailyWillItSnow,
       final double? maxtempC,
       final double? maxtempF,
-      final int? maxwindKph,
+      final double? maxwindKph,
       final double? maxwindMph,
       final double? mintempC,
       final double? mintempF,
       final double? totalprecipIn,
       final double? totalprecipMm,
-      final int? totalsnowCm,
-      final int? uv}) = _$WeatherInDayEntityImpl;
+      final double? totalsnowCm,
+      final double? uv}) = _$WeatherInDayEntityImpl;
 
   factory _WeatherInDayEntity.fromJson(Map<String, dynamic> json) =
       _$WeatherInDayEntityImpl.fromJson;
 
   @override
-  int? get avghumidity;
+  double? get avghumidity;
   @override
   double? get avgtempC;
   @override
@@ -556,7 +556,7 @@ abstract class _WeatherInDayEntity implements WeatherInDayEntity {
   @override
   double? get avgvisKm;
   @override
-  int? get avgvisMiles;
+  double? get avgvisMiles;
   @override
   ConditionEntity? get condition;
   @override
@@ -572,7 +572,7 @@ abstract class _WeatherInDayEntity implements WeatherInDayEntity {
   @override
   double? get maxtempF;
   @override
-  int? get maxwindKph;
+  double? get maxwindKph;
   @override
   double? get maxwindMph;
   @override
@@ -584,9 +584,9 @@ abstract class _WeatherInDayEntity implements WeatherInDayEntity {
   @override
   double? get totalprecipMm;
   @override
-  int? get totalsnowCm;
+  double? get totalsnowCm;
   @override
-  int? get uv;
+  double? get uv;
   @override
   @JsonKey(ignore: true)
   _$$WeatherInDayEntityImplCopyWith<_$WeatherInDayEntityImpl> get copyWith =>
