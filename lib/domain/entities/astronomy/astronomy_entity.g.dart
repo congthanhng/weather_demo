@@ -13,10 +13,10 @@ _$AstronomyEntityImpl _$$AstronomyEntityImplFromJson(
       sunset: json['sunset'] as String?,
       moonrise: json['moonrise'] as String?,
       moonset: json['moonset'] as String?,
-      moonPhase: json['moonPhase'] as String?,
-      moonIllumination: json['moonIllumination'] as String?,
-      isMoonUp: json['isMoonUp'] as int?,
-      isSunUp: json['isSunUp'] as int?,
+      moonPhase: json['moon_phase'] as String?,
+      moonIllumination: json['moon_illumination'] as String?,
+      isMoonUp: json['is_moon_up'] as int?,
+      isSunUp: json['is_sun_up'] as int?,
     );
 
 Map<String, dynamic> _$$AstronomyEntityImplToJson(
@@ -26,8 +26,8 @@ Map<String, dynamic> _$$AstronomyEntityImplToJson(
       'sunset': instance.sunset,
       'moonrise': instance.moonrise,
       'moonset': instance.moonset,
-      'moonPhase': instance.moonPhase,
-      'moonIllumination': instance.moonIllumination,
-      'isMoonUp': instance.isMoonUp,
-      'isSunUp': instance.isSunUp,
+      'moon_phase': instance.moonPhase,
+      'moon_illumination': instance.moonIllumination,
+      'is_moon_up': instance.isMoonUp,
+      'is_sun_up': instance.isSunUp,
     };

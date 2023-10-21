@@ -13,8 +13,8 @@ _$LocationEntityImpl _$$LocationEntityImplFromJson(Map<String, dynamic> json) =>
       country: json['country'] as String?,
       lat: (json['lat'] as num?)?.toDouble(),
       lon: (json['lon'] as num?)?.toDouble(),
-      tzId: json['tzId'] as String?,
-      localtimeEpoch: json['localtimeEpoch'] as int?,
+      tzId: json['tz_id'] as String?,
+      localtimeEpoch: json['localtime_epoch'] as int?,
       localtime: json['localtime'] as String?,
     );
 
@@ -26,7 +26,7 @@ Map<String, dynamic> _$$LocationEntityImplToJson(
       'country': instance.country,
       'lat': instance.lat,
       'lon': instance.lon,
-      'tzId': instance.tzId,
-      'localtimeEpoch': instance.localtimeEpoch,
+      'tz_id': instance.tzId,
+      'localtime_epoch': instance.localtimeEpoch,
       'localtime': instance.localtime,
     };

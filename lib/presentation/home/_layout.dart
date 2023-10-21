@@ -6,15 +6,24 @@ final class _HomeLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: BlocListener<HomeBloc, HomeState>(
-      listener: (context, state) {
-        if (state is HomeFetchFailure) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text(state.message),
-          ),);
-        }
-      },
-      child: SafeArea(child: Text('Hello World')),
-    ));
+      body: BlocListener<HomeBloc, HomeState>(
+        listenWhen: (previous, current) => current is HomeFetchFailure,
+        listener: (context, state) {
+          if (state is HomeFetchFailure) {
+            context.showSnackBar(state.message);
+          }
+        },
+        child: SafeArea(
+          child: BlocBuilder<HomeBloc, HomeState>(
+            builder: (context, state) {
+              if (state is HomeForecastFetchSuccess) {
+                return _FetchedLayout(dataModel: state.model);
+              }
+              return const _Loading();
+            },
+          ),
+        ),
+      ),
+    );
   }
 }

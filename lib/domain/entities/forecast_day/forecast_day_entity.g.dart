@@ -10,7 +10,7 @@ _$ForecastDayEntityImpl _$$ForecastDayEntityImplFromJson(
         Map<String, dynamic> json) =>
     _$ForecastDayEntityImpl(
       date: json['date'] as String?,
-      dateEpoch: json['dateEpoch'] as int?,
+      dateEpoch: json['date_epoch'] as int?,
       day: json['day'] == null
           ? null
           : WeatherInfoEntity.fromJson(json['day'] as Map<String, dynamic>),
@@ -26,7 +26,7 @@ Map<String, dynamic> _$$ForecastDayEntityImplToJson(
         _$ForecastDayEntityImpl instance) =>
     <String, dynamic>{
       'date': instance.date,
-      'dateEpoch': instance.dateEpoch,
+      'date_epoch': instance.dateEpoch,
       'day': instance.day,
       'astro': instance.astro,
       'hour': instance.hour,
