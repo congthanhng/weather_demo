@@ -31,6 +31,10 @@ final class _FetchedLayout extends StatelessWidget {
           _WindBoxInfo(
             dataModel: dataModel.current,
           ),
+          const SizedBox(
+            height: 8,
+          ),
+          _AstronomyBoxInfo(dataModel: dataModel),
           _DaysForecast(forecast: dataModel.forecast),
         ],
       ),
