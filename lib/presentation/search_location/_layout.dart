@@ -6,11 +6,35 @@ final class _SearchLocationLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: TextField(
-          decoration: InputDecoration(
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(50))),
+      backgroundColor: Colors.lightBlue,
+      body: BlocListener<LocationBloc, LocationState>(
+        listenWhen: (previous, current) => [
+          LocationSelectedSuccess,
+          LocationSearchFailure
+        ].contains(current.runtimeType),
+        listener: (context, state) {
+          if (state is LocationSearchFailure) {
+            context.showSnackBar(state.message);
+            return;
+          }
+
+          if (state is LocationSelectedSuccess) {
+            Navigator.pop(context);
+            return;
+          }
+        },
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.lightBlueAccent, Colors.lightBlue],
+              transform: GradientRotation(pi / 4),
+            ),
+          ),
+          child: const SafeArea(
+            child: Column(
+              children: [_SearchBar(), Expanded(child: _Result())],
+            ),
+          ),
         ),
       ),
     );

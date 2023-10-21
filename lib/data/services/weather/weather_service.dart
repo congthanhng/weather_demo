@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:weather_demo/domain/entities/entities.dart';
 import 'package:weather_demo/domain/entities/weather/weather_entity.dart';
 
 part 'weather_service.g.dart';
@@ -13,4 +14,9 @@ abstract class WeatherService {
       @Query('key') String apiKey,
       @Query('q') String q,
       @Query('days') int days,);
+
+  @GET('/search.json')
+  Future<List<LocationEntity>> searchLocation(
+      @Query('key') String apiKey,
+      @Query('q') String q,);
 }

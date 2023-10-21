@@ -6,6 +6,7 @@ import 'package:weather_demo/domain/entities/entities.dart';
 import 'package:weather_demo/presentation/home/bloc/use_case.dart';
 
 part 'home_event.dart';
+
 part 'home_state.dart';
 
 final class HomeBloc extends Bloc<HomeEvent, HomeState> {
@@ -24,7 +25,7 @@ final class HomeBloc extends Bloc<HomeEvent, HomeState> {
     Emitter<HomeState> emit,
   ) async {
     emit(HomeFetching(model: state.model.copyWith()));
-    await _useCase.getForecast().then(
+    await _useCase.getForecast(location: event.location).then(
       (value) {
         emit(HomeForecastFetchSuccess(model: value));
       },

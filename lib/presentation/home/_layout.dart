@@ -7,13 +7,28 @@ final class _HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlue,
-      body: BlocListener<HomeBloc, HomeState>(
-        listenWhen: (previous, current) => current is HomeFetchFailure,
-        listener: (context, state) {
-          if (state is HomeFetchFailure) {
-            context.showSnackBar(state.message);
-          }
-        },
+      body: MultiBlocListener(
+        listeners: [
+          BlocListener<HomeBloc, HomeState>(
+            listenWhen: (previous, current) => current is HomeFetchFailure,
+            listener: (context, state) {
+              if (state is HomeFetchFailure) {
+                context.showSnackBar(state.message);
+              }
+            },
+          ),
+          BlocListener<LocationBloc, LocationState>(
+            listenWhen: (previous, current) =>
+                current is LocationSelectedSuccess,
+            listener: (context, state) {
+              if (state is LocationSelectedSuccess) {
+                context
+                    .read<HomeBloc>()
+                    .add(HomeForecastFetched(location: state.selected));
+              }
+            },
+          ),
+        ],
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(

@@ -1,18 +1,18 @@
 import 'package:weather_demo/data/repositories_imp/weather/weather_repository_impl.dart';
 import 'package:weather_demo/domain/entities/entities.dart';
-import 'package:weather_demo/domain/repositories/weather/weather_repository.dart';
+import 'package:weather_demo/domain/repositories/repositories.dart';
 import 'package:weather_demo/domain/usecases/weather/weather_usecase.dart';
 
-final class HomeBlocUseCase implements WeatherUseCase {
+final class LocationBlocUseCase implements WeatherUseCase {
   final WeatherRepository _weatherRepository = WeatherRepositoryImpl();
 
   @override
-  Future<WeatherEntity> getForecast({LocationEntity? location}) {
-    return _weatherRepository.getForecast(location: location);
+  Future<List<LocationEntity>> searchLocation(String keyword) {
+    return _weatherRepository.searchLocation(keyword);
   }
 
   @override
-  Future<List<LocationEntity>> searchLocation(String keyword) {
+  Future<WeatherEntity> getForecast({LocationEntity? location}) {
     throw UnimplementedError();
   }
 }

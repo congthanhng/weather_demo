@@ -13,14 +13,18 @@ final class WeatherRepositoryImpl extends WeatherRepository {
   static const days = 7;
 
   @override
-  Future<WeatherEntity> getForecast() {
+  Future<WeatherEntity> getForecast({LocationEntity? location}) {
     final apiKey = dotenv.get('API_KEY');
+    if (location != null) {
+      final locationToSearch = '${location.lat},${location.lon}';
+      return _weatherService.getForecast(apiKey, locationToSearch, 7);
+    }
     return _weatherService.getForecast(apiKey, q, 7);
   }
 
   @override
-  Future<List<LocationEntity>> searchLocation() {
-    // TODO: implement searchLocation
-    throw UnimplementedError();
+  Future<List<LocationEntity>> searchLocation(String keyword) {
+    final apiKey = dotenv.get('API_KEY');
+    return _weatherService.searchLocation(apiKey, keyword);
   }
 }
