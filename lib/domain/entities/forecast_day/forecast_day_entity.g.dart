@@ -13,7 +13,7 @@ _$ForecastDayEntityImpl _$$ForecastDayEntityImplFromJson(
       dateEpoch: json['date_epoch'] as int?,
       day: json['day'] == null
           ? null
-          : WeatherInfoEntity.fromJson(json['day'] as Map<String, dynamic>),
+          : WeatherInDayEntity.fromJson(json['day'] as Map<String, dynamic>),
       astro: json['astro'] == null
           ? null
           : AstronomyEntity.fromJson(json['astro'] as Map<String, dynamic>),

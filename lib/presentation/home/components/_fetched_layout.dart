@@ -10,8 +10,16 @@ class _FetchedLayout extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('${dataModel.location?.toJson()}'),
-        Text('${dataModel.current?.toJson().toString()}'),
+        Text('${dataModel.location?.name}'),
+        Text('${dataModel.current?.tempC}'),
+        Text('${dataModel.current?.condition?.text}'),
+        Text('${dataModel.current?.windMph}'),
+        Text('${dataModel.current?.windKph}'),
+        Text('${dataModel.current?.windDir}'),
+        Text('${dataModel.current?.uv}'),
+
+
+
       ],
     );
   }

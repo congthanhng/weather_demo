@@ -22,7 +22,7 @@ ForecastDayEntity _$ForecastDayEntityFromJson(Map<String, dynamic> json) {
 mixin _$ForecastDayEntity {
   String? get date => throw _privateConstructorUsedError;
   int? get dateEpoch => throw _privateConstructorUsedError;
-  WeatherInfoEntity? get day => throw _privateConstructorUsedError;
+  WeatherInDayEntity? get day => throw _privateConstructorUsedError;
   AstronomyEntity? get astro => throw _privateConstructorUsedError;
   List<WeatherInfoEntity>? get hour => throw _privateConstructorUsedError;
 
@@ -41,11 +41,11 @@ abstract class $ForecastDayEntityCopyWith<$Res> {
   $Res call(
       {String? date,
       int? dateEpoch,
-      WeatherInfoEntity? day,
+      WeatherInDayEntity? day,
       AstronomyEntity? astro,
       List<WeatherInfoEntity>? hour});
 
-  $WeatherInfoEntityCopyWith<$Res>? get day;
+  $WeatherInDayEntityCopyWith<$Res>? get day;
   $AstronomyEntityCopyWith<$Res>? get astro;
 }
 
@@ -80,7 +80,7 @@ class _$ForecastDayEntityCopyWithImpl<$Res, $Val extends ForecastDayEntity>
       day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as WeatherInfoEntity?,
+              as WeatherInDayEntity?,
       astro: freezed == astro
           ? _value.astro
           : astro // ignore: cast_nullable_to_non_nullable
@@ -94,12 +94,12 @@ class _$ForecastDayEntityCopyWithImpl<$Res, $Val extends ForecastDayEntity>
 
   @override
   @pragma('vm:prefer-inline')
-  $WeatherInfoEntityCopyWith<$Res>? get day {
+  $WeatherInDayEntityCopyWith<$Res>? get day {
     if (_value.day == null) {
       return null;
     }
 
-    return $WeatherInfoEntityCopyWith<$Res>(_value.day!, (value) {
+    return $WeatherInDayEntityCopyWith<$Res>(_value.day!, (value) {
       return _then(_value.copyWith(day: value) as $Val);
     });
   }
@@ -128,12 +128,12 @@ abstract class _$$ForecastDayEntityImplCopyWith<$Res>
   $Res call(
       {String? date,
       int? dateEpoch,
-      WeatherInfoEntity? day,
+      WeatherInDayEntity? day,
       AstronomyEntity? astro,
       List<WeatherInfoEntity>? hour});
 
   @override
-  $WeatherInfoEntityCopyWith<$Res>? get day;
+  $WeatherInDayEntityCopyWith<$Res>? get day;
   @override
   $AstronomyEntityCopyWith<$Res>? get astro;
 }
@@ -167,7 +167,7 @@ class __$$ForecastDayEntityImplCopyWithImpl<$Res>
       day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as WeatherInfoEntity?,
+              as WeatherInDayEntity?,
       astro: freezed == astro
           ? _value.astro
           : astro // ignore: cast_nullable_to_non_nullable
@@ -199,7 +199,7 @@ class _$ForecastDayEntityImpl implements _ForecastDayEntity {
   @override
   final int? dateEpoch;
   @override
-  final WeatherInfoEntity? day;
+  final WeatherInDayEntity? day;
   @override
   final AstronomyEntity? astro;
   final List<WeatherInfoEntity>? _hour;
@@ -254,7 +254,7 @@ abstract class _ForecastDayEntity implements ForecastDayEntity {
   const factory _ForecastDayEntity(
       {final String? date,
       final int? dateEpoch,
-      final WeatherInfoEntity? day,
+      final WeatherInDayEntity? day,
       final AstronomyEntity? astro,
       final List<WeatherInfoEntity>? hour}) = _$ForecastDayEntityImpl;
 
@@ -266,7 +266,7 @@ abstract class _ForecastDayEntity implements ForecastDayEntity {
   @override
   int? get dateEpoch;
   @override
-  WeatherInfoEntity? get day;
+  WeatherInDayEntity? get day;
   @override
   AstronomyEntity? get astro;
   @override

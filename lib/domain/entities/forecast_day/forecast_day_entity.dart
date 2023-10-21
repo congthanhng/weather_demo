@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:weather_demo/domain/entities/astronomy/astronomy_entity.dart';
+import 'package:weather_demo/domain/entities/weather_in_day/weather_in_day_entity.dart';
 import 'package:weather_demo/domain/entities/weather_info/weather_info_entity.dart';
 
 part 'forecast_day_entity.freezed.dart';
@@ -10,7 +11,7 @@ class ForecastDayEntity with _$ForecastDayEntity {
   const factory ForecastDayEntity({
     String? date,
     int? dateEpoch,
-    WeatherInfoEntity? day,
+    WeatherInDayEntity? day,
     AstronomyEntity? astro,
     List<WeatherInfoEntity>? hour,
   }) = _ForecastDayEntity;
