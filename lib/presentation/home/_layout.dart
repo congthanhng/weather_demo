@@ -6,6 +6,7 @@ final class _HomeLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue,
       body: BlocListener<HomeBloc, HomeState>(
         listenWhen: (previous, current) => current is HomeFetchFailure,
         listener: (context, state) {
@@ -13,14 +14,22 @@ final class _HomeLayout extends StatelessWidget {
             context.showSnackBar(state.message);
           }
         },
-        child: SafeArea(
-          child: BlocBuilder<HomeBloc, HomeState>(
-            builder: (context, state) {
-              if (state is HomeForecastFetchSuccess) {
-                return _FetchedLayout(dataModel: state.model);
-              }
-              return const _Loading();
-            },
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.lightBlueAccent, Colors.lightBlue],
+              transform: GradientRotation(pi / 4),
+            ),
+          ),
+          child: SafeArea(
+            child: BlocBuilder<HomeBloc, HomeState>(
+              builder: (context, state) {
+                if (state is HomeForecastFetchSuccess) {
+                  return _FetchedLayout(dataModel: state.model);
+                }
+                return const _Loading();
+              },
+            ),
           ),
         ),
       ),
