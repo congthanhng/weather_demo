@@ -11,6 +11,12 @@ class _ForecastItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final min = context.read<HomeBloc>().isTempC
+        ? item.day?.mintempC
+        : item.day?.mintempF;
+    final max = context.read<HomeBloc>().isTempC
+        ? item.day?.maxtempC
+        : item.day?.maxtempF;
     return Row(
       children: [
         CommonImageView(path: item.day?.condition?.icon),
@@ -19,8 +25,10 @@ class _ForecastItem extends StatelessWidget {
           style: const TextStyle(color: Colors.white),
         ),
         const Spacer(),
-        Text('${item.day?.mintempC}° / ${item.day?.maxtempC}°',
-            style: const TextStyle(color: Colors.white),)
+        Text(
+          '$min° / $max°',
+          style: const TextStyle(color: Colors.white),
+        )
       ],
     );
   }

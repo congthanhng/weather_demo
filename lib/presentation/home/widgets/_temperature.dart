@@ -14,27 +14,53 @@ class _Temperature extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '${dataModel?.tempC}',
+                  context.read<HomeBloc>().isTempC
+                      ? '${dataModel?.tempC?.toInt()}'
+                      : '${dataModel?.tempF?.toInt()}',
                   style: const TextStyle(
                     fontWeight: FontWeight.w300,
                     fontSize: 94,
                     color: Colors.white,
                   ),
                 ),
-                const Baseline(
-                  baseline: 50,
-                  baselineType: TextBaseline.alphabetic,
-                  child: Text(
-                    '°C',
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.white,
+                Column(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        context
+                            .read<HomeBloc>()
+                            .add(HomeTemperatureChanged(isTempC: true));
+                      },
+                      child: Text(
+                        '°C',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: context.read<HomeBloc>().isTempC
+                              ? Colors.white
+                              : Colors.grey,
+                        ),
+                      ),
                     ),
-                  ),
-                )
+                    TextButton(
+                      onPressed: () {
+                        context
+                            .read<HomeBloc>()
+                            .add(HomeTemperatureChanged(isTempC: false));
+                      },
+                      child: Text(
+                        '°F',
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: context.read<HomeBloc>().isTempC
+                              ? Colors.grey
+                              : Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
             Row(
@@ -44,7 +70,7 @@ class _Temperature extends StatelessWidget {
                   path: dataModel?.condition?.icon,
                 ),
                 const SizedBox(
-                  width: 8,
+                  width: 4,
                 ),
                 Text(
                   '${dataModel?.condition?.text}',

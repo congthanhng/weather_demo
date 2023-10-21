@@ -19,6 +19,22 @@ class _MoreBoxInfo extends StatelessWidget {
           Row(
             children: [
               const Text(
+                'Temperature C:',
+                style: TextStyle(color: Colors.white),
+              ),
+              const Spacer(),
+              Text(
+                '${dataModel?.current?.tempC}°C',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const Text(
                 'Temperature F:',
                 style: TextStyle(color: Colors.white),
               ),
@@ -26,7 +42,9 @@ class _MoreBoxInfo extends StatelessWidget {
               Text(
                 '${dataModel?.current?.tempF}°F',
                 style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w600,),
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
@@ -40,7 +58,9 @@ class _MoreBoxInfo extends StatelessWidget {
               Text(
                 '${dataModel?.current?.humidity}%',
                 style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w600,),
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
