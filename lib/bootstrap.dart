@@ -4,6 +4,7 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:weather_demo/shared/injection/app_injection.dart';
 import 'package:weather_demo/shared/resources/assets.gen.dart';
 
 class AppBlocObserver extends BlocObserver {
@@ -31,6 +32,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
   // Add cross-flavor configuration here
   await dotenv.load(fileName: Assets.environments.dev);
+  injection.setUpInjection();
 
   runApp(await builder());
 }

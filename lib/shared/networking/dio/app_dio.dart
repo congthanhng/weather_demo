@@ -6,9 +6,9 @@ import 'package:weather_demo/shared/networking/interceptors/app_interceptor.dart
 final class AppDio {
   final dio = Dio();
 
-  void init(BaseOptions options) {
+  void init({BaseOptions? options}) {
     final baseUrl = dotenv.get('BASE_URL');
-    dio.options = BaseOptions(baseUrl: baseUrl);
+    dio.options = options ?? BaseOptions(baseUrl: baseUrl);
     dio.interceptors.addAll([
       PrettyDioLogger(
         requestHeader: true,

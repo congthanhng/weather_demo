@@ -19,9 +19,17 @@ class _WeatherService implements WeatherService {
   String? baseUrl;
 
   @override
-  Future<WeatherEntity> getForecast() async {
+  Future<WeatherEntity> getForecast(
+    String apiKey,
+    String q,
+    int days,
+  ) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'key': apiKey,
+      r'q': q,
+      r'days': days,
+    };
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio
