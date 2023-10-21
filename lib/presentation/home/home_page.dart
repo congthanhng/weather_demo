@@ -17,6 +17,7 @@ part 'widgets/_temperature.dart';
 part 'widgets/_wind_box_info.dart';
 part 'widgets/_pressure_box_info.dart';
 part 'widgets/_more_box_info.dart';
+part 'widgets/_location.dart';
 
 final class HomePage extends StatelessWidget {
   const HomePage({super.key});

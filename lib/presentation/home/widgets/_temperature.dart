@@ -39,7 +39,7 @@ class _Temperature extends StatelessWidget {
                           fontSize: 24,
                           color: context.read<HomeBloc>().isTempC
                               ? Colors.white
-                              : Colors.grey,
+                              : Colors.grey[400],
                         ),
                       ),
                     ),
@@ -54,7 +54,7 @@ class _Temperature extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           color: context.read<HomeBloc>().isTempC
-                              ? Colors.grey
+                              ? Colors.grey[400]
                               : Colors.white,
                         ),
                       ),

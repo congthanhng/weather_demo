@@ -11,15 +11,8 @@ class _FetchedLayout extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Center(
-            child: Text(
-              '${dataModel.location?.name}',
-              style: const TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
+          _Location(
+            data: dataModel.location,
           ),
           _Temperature(dataModel: dataModel.current),
           _MoreBoxInfo(
