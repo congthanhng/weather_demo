@@ -1,6 +1,6 @@
 part of '../home_page.dart';
 
-class _Loading extends StatelessWidget {
+final class _Loading extends StatelessWidget {
   const _Loading({super.key});
 
   @override

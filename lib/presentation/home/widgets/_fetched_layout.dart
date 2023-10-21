@@ -1,6 +1,6 @@
 part of '../home_page.dart';
 
-class _FetchedLayout extends StatelessWidget {
+final class _FetchedLayout extends StatelessWidget {
   const _FetchedLayout({required this.dataModel});
 
   final WeatherEntity dataModel;
@@ -11,6 +11,9 @@ class _FetchedLayout extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          const SizedBox(
+            height: 8,
+          ),
           _Location(
             data: dataModel.location,
           ),

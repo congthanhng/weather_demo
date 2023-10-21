@@ -1,6 +1,6 @@
 part of '../home_page.dart';
 
-class _ForecastItem extends StatelessWidget {
+final class _ForecastItem extends StatelessWidget {
   const _ForecastItem({required this.item, required this.title, super.key});
 
   final ForecastDayEntity item;

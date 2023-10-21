@@ -1,6 +1,6 @@
 part of '../home_page.dart';
 
-class _PressureBoxInfo extends StatelessWidget {
+final class _PressureBoxInfo extends StatelessWidget {
   const _PressureBoxInfo({required this.dataModel, super.key});
 
   final WeatherEntity? dataModel;

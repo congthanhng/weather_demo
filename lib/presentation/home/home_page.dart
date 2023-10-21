@@ -7,6 +7,7 @@ import 'package:weather_demo/presentation/home/bloc/home_bloc.dart';
 import 'package:weather_demo/presentation/widgets/common_image_view.dart';
 import 'package:weather_demo/presentation/widgets/snack_bars.dart';
 import 'package:weather_demo/shared/extensions/string_ext.dart';
+import 'package:weather_demo/shared/route/route_named.dart';
 
 part '_layout.dart';
 part 'widgets/_loading.dart';

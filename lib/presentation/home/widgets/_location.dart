@@ -1,6 +1,6 @@
 part of '../home_page.dart';
 
-class _Location extends StatelessWidget {
+final class _Location extends StatelessWidget {
   const _Location({required this.data, super.key});
 
   final LocationEntity? data;
@@ -14,7 +14,7 @@ class _Location extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(50),
           onTap: () {
-
+            Navigator.pushNamed(context, RouteNamed.searchLocationPage);
           },
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 4),

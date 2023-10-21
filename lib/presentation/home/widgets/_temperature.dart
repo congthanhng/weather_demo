@@ -1,6 +1,6 @@
 part of '../home_page.dart';
 
-class _Temperature extends StatelessWidget {
+final class _Temperature extends StatelessWidget {
   const _Temperature({required this.dataModel, super.key});
 
   final WeatherInfoEntity? dataModel;

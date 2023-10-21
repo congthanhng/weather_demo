@@ -3,7 +3,7 @@ import 'package:weather_demo/domain/entities/entities.dart';
 import 'package:weather_demo/domain/repositories/weather/weather_repository.dart';
 import 'package:weather_demo/domain/usecases/weather/weather_usecase.dart';
 
-class HomeBlocUseCase implements WeatherUseCase {
+final class HomeBlocUseCase implements WeatherUseCase {
   final WeatherRepository _weatherRepository = WeatherRepositoryImpl();
 
   @override
