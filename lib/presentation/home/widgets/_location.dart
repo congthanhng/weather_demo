@@ -20,7 +20,7 @@ final class _Location extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 4),
             child: Text(
               textAlign: TextAlign.center,
-              '${data?.name}',
+              '${data?.name} - ${data?.country}',
               style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 18,

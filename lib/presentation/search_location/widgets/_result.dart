@@ -45,7 +45,7 @@ class _Result extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  '${item.name} - ${item.region}',
+                  '${item.name}',
                   style: const TextStyle(color: Colors.white),
                 ),
                 Text(
